@@ -1,6 +1,6 @@
 import praw
 from flask import Blueprint, render_template,request,session,redirect
-
+import random
 
 
 
@@ -13,6 +13,7 @@ def get_posts():
         hot_posts = subreddit.hot(limit=100)
         for post in hot_posts:
             posts_data.append({'url': post.url, 'ups': post.ups})
+        random.shuffle(posts_data)
     return posts_data
 
 
@@ -28,7 +29,7 @@ def handle_choise():
             current_index += 1
             session['current_index'] = current_index
         else:
-            session['current_index'] = 0
+           return True
 
     elif choice == 'lower':
         print(len(posts_data))
@@ -38,4 +39,5 @@ def handle_choise():
             session['current_index'] = current_index
             print(current_index)
         else:
-            pass
+           return True
+    return False
