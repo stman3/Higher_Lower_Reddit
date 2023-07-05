@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+              <a id="home" href="/">Home</a></li>
+              <a id="about" href="/about">About</a></li>
+              <a id="Contact" href="/Contact">Contact</a></li>
+          </nav>
+      </header>
+     
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+      <footer>
+        <p>My Website &copy; 2020</p>
+      </footer>
+    </div>
+  </body>
+</html>

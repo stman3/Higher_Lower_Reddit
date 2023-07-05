@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %} Classic {% endblock %} {% block
+content %}
+<div class="image-container">
+  {% if posts %}
+  <img class="memesImg" src="{{ posts[current_index].url }}" alt="Meme Image" />
+  <img
+    class="memesImg"
+    src="{{ posts[current_index+1].url }}"
+    alt="Meme Image"
+  />
+  {% else %}
+  <p>No posts available</p>
+  {% endif %}
+</div>
+{% endblock %}
