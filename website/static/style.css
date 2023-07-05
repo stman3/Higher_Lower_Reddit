@@ -186,6 +186,24 @@ button, input, optgroup, select, textarea {
   border-color: #fff transparent transparent;
   border-width: 0.625rem 0.46875rem 0;
 }
+.ups {
+  font-weight: 7000;
+  font-size: 34px;
+  color: #fff989;
+
+}
+.upvoteText{
+  font-weight: 7000;
+  font-size: 34px;
+  color: white;
+}
+.upvoteContiner{
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  right: 70%;
+  text-align: center;
+}
 
 
 
