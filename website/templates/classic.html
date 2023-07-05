@@ -8,6 +8,29 @@ content %}
     src="{{ posts[current_index+1].url }}"
     alt="Meme Image"
   />
+  <div class="versus-block versus-block--new">
+    <div class="versus-block__text">vs</div>
+    <div class="versus-block__overlay"></div>
+    <div class="versus-block__icon"></div>
+    <h1>{{posts[current_index].ups}}</h1>
+  </div>
+  <div class="term-actions">
+    <form action="{{url_for('views.classic')}}" method="post">
+      <button
+        class="game-button term-actions__button term-actions__button--higher"
+        name="choice"
+        value="higher"
+      >
+        Higher</button
+      ><button
+        class="game-button term-actions__button term-actions__button--lower"
+        name="choice"
+        value="lower"
+      >
+        Lower
+      </button>
+    </form>
+  </div>
   {% else %}
   <p>No posts available</p>
   {% endif %}
