@@ -1,7 +1,9 @@
 {% extends "base.html" %} {% block title %}result{% endblock %} {% block content
 %}
 
-<p>resualt</p>
-<h1>{{score}}</h1>
+<div class="result-container">
+  <p>Result</p>
+  <h1 class="score" id="score">{{ score }}</h1>
+</div>
 
 {% endblock %}

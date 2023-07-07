@@ -3,6 +3,10 @@
   --footer-height: 5vh;
 }
 
+.main-container {
+  background-image: url("images/bad-4.gif");
+  background-size: cover;
+}
 body {
   min-height: 100vh;
   margin: 0;
@@ -41,21 +45,22 @@ footer {
 .image-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
 }
 
 .memesImg {
   width: 100%;
-  height:calc(100vh - var(--header-height)*2);
-
+  height: calc(100vh - var(--header-height) * 2);
+}
+.memesImg:hover {
+  filter: blur(20px);
 }
 .versus-block {
   height: 3.4375rem;
   width: 3.4375rem;
 }
 .versus-block--new {
-  -webkit-animation: pop-in-new .3s cubic-bezier(.24,-.17,.45,1.99);
-  animation: pop-in-new .3s cubic-bezier(.24,-.17,.45,1.99);
+  -webkit-animation: pop-in-new 0.3s cubic-bezier(0.24, -0.17, 0.45, 1.99);
+  animation: pop-in-new 0.3s cubic-bezier(0.24, -0.17, 0.45, 1.99);
 }
 
 .versus-block {
@@ -66,9 +71,9 @@ footer {
   background: #fff;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: table;
   text-transform: uppercase;
   overflow: hidden;
@@ -96,18 +101,18 @@ footer {
   position: absolute;
   top: 50%;
   opacity: 0;
-  -webkit-transition: opacity .3s linear;
-  -o-transition: opacity .3s linear;
-  transition: opacity .3s linear;
-  -webkit-transition-delay: .5s;
-  -o-transition-delay: .5s;
-  transition-delay: .5s;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 25px;
 }
 .term-actions {
@@ -124,10 +129,11 @@ footer {
   display: block;
 }
 
-.game-button:active, .game-button:hover {
-  -webkit-transition: all .1s ease-in;
-  -o-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+.game-button:active,
+.game-button:hover {
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
   background: #fff;
   color: #000;
 }
@@ -146,8 +152,8 @@ footer {
   margin: 0 10px 10px;
   position: relative;
   border: 0.125rem solid #fff;
-  -webkit-box-shadow: 0 0.9375rem 2.5rem 0 rgba(0,0,0,.1);
-  box-shadow: 0 0.9375rem 2.5rem 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 0.9375rem 2.5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.9375rem 2.5rem 0 rgba(0, 0, 0, 0.1);
   outline: 0;
   background: transparent no-repeat 0 0;
   font-weight: 700;
@@ -163,22 +169,32 @@ footer {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-button, html input[type=button], input[type=reset], input[type=submit] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-button, select {
+button,
+select {
   text-transform: none;
 }
 button {
   overflow: visible;
 }
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   color: inherit;
   font: inherit;
   margin: 0;
 }
-*, :after, :before {
+*,
+:after,
+:before {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -189,28 +205,150 @@ button, input, optgroup, select, textarea {
 .ups {
   font-weight: 7000;
   font-size: 34px;
-  color: #fff989;
-
+  color: burlywood;
 }
-.upvoteText{
+.upvoteText {
   font-weight: 7000;
   font-size: 34px;
-  color: white;
+  color: black;
 }
-.upvoteContiner{
+.upvoteContiner {
   position: absolute;
   top: 40%;
   left: 25%;
   right: 70%;
   text-align: center;
 }
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 17px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+footer {
+  background-color: #333;
+}
+
+/* Home style */
+
+.my-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.my-centered {
+  margin-bottom: 20px;
+}
+
+.my-button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.my-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.my-button:first-child {
+  margin-right: 5px;
+}
+
+.my-button:last-child {
+  margin-left: 5px;
+}
+
+/* result style */
+
+.result-container {
+  text-align: center;
+  color: #04aa6d;
+}
+.main-container .result-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url("images/bad-5.gif");
+  width: 100%;
+  height: calc(100vh - var(--header-height) * 2);
+  background-size: cover;
+}
+
+.score {
+  font-size: 48px;
+  color: #04aa6d;
+}
+
+@keyframes scoreAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-animation {
+  animation-name: scoreAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+/* for about */
+.mian-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-box {
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.main-box p {
+  margin-bottom: 10px;
+}
 
 @media (max-width: 768px) {
   .image-container {
     grid-template-columns: 1fr;
   }
-
-  
 }

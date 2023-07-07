@@ -11,6 +11,13 @@ def home():
 
 
 
+@views.route('/Contact')
+def contact():
+    return render_template("contact.html")
+
+@views.route('/about')
+def about():
+    return render_template("about.html")
 
  
 @views.route('/classic', methods=['GET', 'POST'])
@@ -18,6 +25,7 @@ def classic():
     posts_data = get_posts()
     current_index = session.get('current_index', 0)
     if request.method == 'POST':
+      session['current_index'] = current_index
       should_redirect = handle_choise()
       if should_redirect:
             random.shuffle(posts_data)

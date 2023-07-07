@@ -9,18 +9,18 @@
   <body>
     <div class="container">
       <header>
-        <nav>
+        <div class="topnav">
               <a id="home" href="/">Home</a></li>
               <a id="about" href="/about">About</a></li>
               <a id="Contact" href="/Contact">Contact</a></li>
-          </nav>
+        </div>
       </header>
      
-      <main>
+      <main class="main-container">
         {% block content %}{% endblock %}
       </main>
       <footer>
-        <p>My Website &copy; 2023</p>
+        <p><a href="https://www.Youtube.com/"><img style="margin-top: -15px; width: 5vh; height:5vh;" src="{{ url_for('static', filename='/images/githubIcon.png') }}" /></a></p>
       </footer>
     </div>
   </body>

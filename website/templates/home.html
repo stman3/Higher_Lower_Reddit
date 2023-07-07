@@ -1,7 +1,23 @@
-{% extends "base.html" %} {% block title %}test{% endblock %} {% block content
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
 
-<button onclick="location.href='/classic'" type="button">Classic</button>
-<button onclick="location.href='/'" type="button">Beat The Clock</button>
+<div class="my-container">
+  <div class="my-centered">
+    <img
+      src="{{ url_for('static', filename='images/homeicon.png') }}"
+      alt="Logo"
+    />
+  </div>
+  <div class="my-button-group">
+    <button
+      onclick="location.href='/classic'"
+      type="button"
+      class="my-green-button"
+    >
+      Classic
+    </button>
+    <button onclick="location.href='/'" type="button">Beat The Clock</button>
+  </div>
+</div>
 
 {% endblock %}
